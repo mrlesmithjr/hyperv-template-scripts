@@ -7,10 +7,10 @@ codename="$(lsb_release -c | awk {'print $2}')"
 apt-get update
 
 #Preparing and installing Hyper-V kernel packages
-apt-get install linux-virtual
+apt-get install linux-virtual -y
 
 #Installing Hyper-V tools
-apt-get install linux-tools-virtual linux-cloud-tools-virtual
+apt-get install linux-tools-virtual linux-cloud-tools-virtual -y
 
 #Stop services for cleanup
 service rsyslog stop
